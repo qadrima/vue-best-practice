@@ -1,6 +1,6 @@
 # vue best practice (vue-router, vuex)
 
-> A Vue.js project
+> A Vue.js qadri project
 
 ## Build Setup
 
