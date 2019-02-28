@@ -14,19 +14,19 @@ const router = new Router({
 });
 
 router.beforeEach((to, from, next) => {
-  	if (to.matched.some(record => record.meta.requiresAuth)) 
+  	if (to.matched.some(record => record.meta.requiresAuth))
   	{
-  		
+
   		console.log('auth');
     	next();
   	}
-  	else if (to.matched.some(record => record.meta.requiresNonAuth)) 
+  	else if (to.matched.some(record => record.meta.requiresNonAuth))
   	{
   		console.log(store.state.example.count);
   		console.log('non auth');
     	next();
   	}
-  	else 
+  	else
   	{
     	next();
   	}

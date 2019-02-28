@@ -21,8 +21,13 @@
         },
         methods: {
             incrementExample(){
-                console.log('incrementExample');
-                this.$store.commit('incrementExample');
+                this.$store.dispatch('increment', {
+                    amount: 10
+                }).then(response => {
+                    console.log(response);
+                }, error => {
+                    console.error(error);
+                });
             }
         }
     }
